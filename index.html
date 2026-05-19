@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Commercial advisory for UK challenger drinks brands. Trade entry, distributor management, and founder-level commercial sparring."
+    />
+    <title>James Henderson — Commercial advisory for UK drinks brands</title>
+
+    <link
+      rel="preload"
+      href="fonts/PPEditorialNew-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/PPMori-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <style>
+      @font-face {
+        font-family: "PP Editorial";
+        src:
+          url("fonts/PPEditorialNew-Regular.woff2") format("woff2"),
+          url("fonts/PPEditorialNew-Regular.otf") format("opentype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "PP Editorial";
+        src:
+          url("fonts/PPEditorialNew-Ultrabold.woff2") format("woff2"),
+          url("fonts/PPEditorialNew-Ultrabold.otf") format("opentype");
+        font-weight: 800;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "PP Mori";
+        src:
+          url("fonts/PPMori-Regular.woff2") format("woff2"),
+          url("fonts/PPMori-Regular.otf") format("opentype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "PP Mori";
+        src:
+          url("fonts/PPMori-SemiBold.woff2") format("woff2"),
+          url("fonts/PPMori-SemiBold.otf") format("opentype");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      body {
+        font-family: "PP Mori", system-ui, sans-serif;
+        font-weight: 400;
+        font-synthesis: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      .font-editorial {
+        font-family: "PP Editorial", Georgia, serif;
+        font-weight: 400;
+        font-style: normal;
+        font-synthesis: none;
+      }
+
+      .font-mori {
+        font-family: "PP Mori", system-ui, sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        [data-parallax] {
+          transform: none !important;
+        }
+      }
+
+      .hero-headline {
+        font-size: clamp(2.75rem, 6vw + 0.5rem, 5.25rem);
+        line-height: 1.02;
+        letter-spacing: -0.03em;
+      }
+
+      .section-headline {
+        font-size: clamp(2rem, 3.5vw + 0.5rem, 3.25rem);
+        line-height: 1.08;
+        letter-spacing: -0.025em;
+      }
+
+      .parallax-wrap {
+        overflow: hidden;
+      }
+
+      [data-parallax] {
+        will-change: transform;
+      }
+
+      .text-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        color: #2b2b2b;
+        border-bottom: 1px solid #2b2b2b;
+        padding-bottom: 2px;
+        transition: opacity 0.2s ease;
+      }
+
+      .text-link:hover {
+        opacity: 0.6;
+      }
+
+      .text-link:focus-visible {
+        outline: 2px solid #2b2b2b;
+        outline-offset: 2px;
+      }
+
+      .brand-logo {
+        height: 2.25rem;
+        width: auto;
+        max-width: 7.5rem;
+        object-fit: contain;
+        display: block;
+      }
+
+      @media (min-width: 640px) {
+        .brand-logo {
+          height: 2.5rem;
+        }
+      }
+
+      .brand-logo--tesco {
+        height: 1.65rem;
+        max-width: 5.75rem;
+      }
+
+      @media (min-width: 640px) {
+        .brand-logo--tesco {
+          height: 1.85rem;
+          max-width: 6.25rem;
+        }
+      }
+
+      .brand-logo--lwc {
+        height: 2.75rem;
+        max-width: 9rem;
+      }
+
+      @media (min-width: 640px) {
+        .brand-logo--lwc {
+          height: 3.25rem;
+          max-width: 10rem;
+        }
+      }
+
+      .brand-logo--venus {
+        height: 1.85rem;
+        max-width: 6.25rem;
+      }
+
+      @media (min-width: 640px) {
+        .brand-logo--venus {
+          height: 2.05rem;
+          max-width: 6.75rem;
+        }
+      }
+
+      .brand-logo--stores {
+        height: 1.5rem;
+        max-width: 5.25rem;
+      }
+
+      @media (min-width: 640px) {
+        .brand-logo--stores {
+          height: 1.65rem;
+          max-width: 5.75rem;
+        }
+      }
+
+      .case-study-media {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .case-study-media--portrait {
+        aspect-ratio: 3 / 4;
+      }
+
+      .case-study-media--landscape {
+        aspect-ratio: 4 / 3;
+      }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: "#F5F3EE",
+              ink: "#2B2B2B",
+              ink-muted: "#4A4A4A",
+            },
+            fontFamily: {
+              editorial: ['"PP Editorial"', "Georgia", "serif"],
+              mori: ['"PP Mori"', "system-ui", "sans-serif"],
+            },
+            maxWidth: {
+              prose: "42rem",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-cream text-ink antialiased font-mori">
+    <header
+      id="hero"
+      class="min-h-[100dvh] flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-16 lg:py-24"
+    >
+      <div class="w-full max-w-7xl mx-auto">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+        >
+          <div class="lg:col-span-7 xl:col-span-7 order-2 lg:order-1">
+            <p
+              class="font-mori text-xs sm:text-sm uppercase tracking-[0.2em] text-ink-muted mb-6 lg:mb-8"
+            >
+              James Henderson
+            </p>
+
+            <h1
+              class="hero-headline font-editorial text-ink mb-8 lg:mb-10"
+            >
+              Commercial advisory for UK challenger drinks brands.
+            </h1>
+
+            <div
+              class="font-mori text-base sm:text-lg lg:text-xl text-ink-muted leading-relaxed max-w-prose space-y-5"
+            >
+              <p>
+                For founders scaling without a senior commercial hire. Trade
+                entry, distributor + account management, pricing discipline, D2C
+                insight and brand workshopping.
+              </p>
+              <p>
+                Selective UK market entry work for foreign brands.
+              </p>
+            </div>
+
+            <p class="mt-10 lg:mt-12">
+              <a
+                href="https://calendly.com/james-jhenderson/30min"
+                class="text-link font-mori text-sm sm:text-base"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book a 30-minute call
+                <span aria-hidden="true">→</span>
+              </a>
+            </p>
+          </div>
+
+          <div
+            class="lg:col-span-5 xl:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end"
+          >
+            <figure class="parallax-wrap w-full max-w-[22rem] sm:max-w-[26rem] lg:max-w-none">
+              <div class="relative aspect-[4/5] w-full">
+                <img
+                  src="assets/images/james-henderson.jpg"
+                  alt="James Henderson, commercial advisor for UK drinks brands"
+                  width="1040"
+                  height="1300"
+                  class="absolute inset-0 h-full w-full object-cover object-[center_12%]"
+                  data-parallax
+                  data-parallax-strength="0.12"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Who this is for -->
+      <section
+        id="who"
+        class="px-6 sm:px-10 lg:px-16 py-20 lg:py-28 border-t border-ink/10"
+      >
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="section-headline font-editorial text-ink mb-10 lg:mb-14 max-w-3xl"
+          >
+            Who this is for
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 text-ink-muted leading-relaxed text-base sm:text-lg">
+            <div class="space-y-5">
+              <p>
+                Built for UK challenger drinks brands: founders scaling without
+                senior commercial firepower in-house. If you need trade entry
+                strategy, distributor and key-account management, pricing
+                frameworks, or regular founder sparring on brand and commercial
+                direction — I'm here.
+              </p>
+              <p>
+                The alternative is hiring a full-time senior commercial lead at
+                £100k+ committed cost, signing with a distributor and giving away
+                25–30% gross margin in perpetuity, or attempting commercial
+                scale-up without dedicated senior support and losing the year. This
+                advisory sits between those at far lower outlay — and de-risks your
+                B2B ambition significantly.
+              </p>
+            </div>
+            <p>
+              Also: foreign drinks brands ($3m–$50m revenue at home) evaluating UK
+              entry, recently landed and underperforming, or post-Series A
+              signalling international expansion.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section
+        id="products"
+        class="px-6 sm:px-10 lg:px-16 py-20 lg:py-28 border-t border-ink/10"
+      >
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="section-headline font-editorial text-ink mb-6"
+          >
+            Products
+          </h2>
+          <p class="text-ink-muted text-base sm:text-lg leading-relaxed max-w-prose mb-14 lg:mb-16">
+            Five productised engagements. Fixed scope, defined turnaround.
+          </p>
+
+          <div class="divide-y divide-ink/10">
+            <article class="py-10 lg:py-12 first:pt-0">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8">
+                <h3
+                  class="lg:col-span-5 font-editorial text-2xl sm:text-3xl text-ink leading-tight"
+                >
+                  Strategy Diagnostic
+                </h3>
+                <div class="lg:col-span-7">
+                  <p class="font-mori text-sm font-semibold text-ink mb-3">
+                    £1,500–£2,500 · 5 days
+                  </p>
+                  <p class="text-ink-muted leading-relaxed">
+                    60-minute structured deep-dive. 6–8 page written diagnosis of
+                    your UK commercial position and three priority moves for the
+                    next 90 days. The front door for founders unsure whether they
+                    need ongoing advisory.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="py-10 lg:py-12">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8">
+                <h3
+                  class="lg:col-span-5 font-editorial text-2xl sm:text-3xl text-ink leading-tight"
+                >
+                  Buyer Pitch Reset
+                </h3>
+                <div class="lg:col-span-7">
+                  <p class="font-mori text-sm font-semibold text-ink mb-3">
+                    £2,500–£3,500 · 7 days
+                  </p>
+                  <p class="text-ink-muted leading-relaxed">
+                    Existing pitch deck audit. Rewrite with buyer psychology applied.
+                    New sell-sheet and key-account one-pager. Built for brands getting
+                    meetings but not landing the listings.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="py-10 lg:py-12">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8">
+                <h3
+                  class="lg:col-span-5 font-editorial text-2xl sm:text-3xl text-ink leading-tight"
+                >
+                  Market Entry Blueprint
+                </h3>
+                <div class="lg:col-span-7">
+                  <p class="font-mori text-sm font-semibold text-ink mb-3">
+                    £3,500–£5,000 · 10 days
+                  </p>
+                  <p class="text-ink-muted leading-relaxed">
+                    UK category analysis, competitive landscape, channel strategy,
+                    pricing architecture with margin waterfall, distributor and
+                    importer shortlist, target account list of 50–100 outlets,
+                    12-month commercial plan. Agency-quality output at consultant
+                    pricing, in two weeks rather than three months.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="py-10 lg:py-12">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8">
+                <h3
+                  class="lg:col-span-5 font-editorial text-2xl sm:text-3xl text-ink leading-tight"
+                >
+                  Fractional Commercial Support
+                </h3>
+                <div class="lg:col-span-7">
+                  <p class="font-mori text-sm font-semibold text-ink mb-3">
+                    £3,000–£4,500 / month · 3-month minimum
+                  </p>
+                  <p class="text-ink-muted leading-relaxed">
+                    Four days a month of senior commercial input: pipeline
+                    management, weekly buyer outreach, contract review, distributor
+                    relationship management, founder strategic sparring. For brands
+                    that need ongoing senior commercial support but can't yet
+                    justify a £100k+ permanent hire.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="py-10 lg:py-12">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8">
+                <h3
+                  class="lg:col-span-5 font-editorial text-2xl sm:text-3xl text-ink leading-tight"
+                >
+                  Active Market Entry
+                </h3>
+                <div class="lg:col-span-7">
+                  <p class="font-mori text-sm font-semibold text-ink mb-3">
+                    from £25,000 · phased over 6–12 months
+                  </p>
+                  <p class="text-ink-muted leading-relaxed">
+                    Foundation phase (6 months) and activation phase (12 months
+                    total). Blueprint plus delivery: buyer outreach run by me,
+                    attendance at 5–8 buyer meetings, distributor negotiation,
+                    embedded commercial leadership through landing. For foreign brands
+                    with parallel brand and trade-marketing investment and the patience
+                    for a real timeline.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="mt-12 lg:mt-14 font-editorial text-xl sm:text-2xl text-ink">
+            <span>Launch Sprint</span>
+            <span class="font-normal text-ink-muted">
+              — Blueprint + Pitch Reset bundle, ~£6,000.
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Brand wordmarks -->
+      <section
+        id="brands"
+        aria-label="Brands and accounts"
+        class="px-6 sm:px-10 lg:px-16 py-14 lg:py-16 border-t border-ink/10"
+      >
+        <div class="max-w-7xl mx-auto">
+          <ul
+            class="flex flex-wrap items-center justify-center gap-x-8 gap-y-8 sm:gap-x-10"
+          >
+            <li>
+              <img
+                class="brand-logo brand-logo--tesco"
+                src="assets/logos/tesco.png?v=2"
+                alt="Tesco"
+                width="160"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li>
+              <img
+                class="brand-logo"
+                src="assets/logos/sainsburys.png"
+                alt="Sainsbury's"
+                width="160"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li>
+              <img
+                class="brand-logo"
+                src="assets/logos/waitrose.png?v=2"
+                alt="Waitrose"
+                width="160"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li>
+              <img
+                class="brand-logo brand-logo--lwc"
+                src="assets/logos/lwc.png?v=2"
+                alt="LWC"
+                width="140"
+                height="56"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li>
+              <img
+                class="brand-logo"
+                src="assets/logos/bibendum.png?v=2"
+                alt="Bibendum"
+                width="120"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li>
+              <img
+                class="brand-logo"
+                src="assets/logos/matthew-clark.png?v=2"
+                alt="Matthew Clark"
+                width="180"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li>
+              <img
+                class="brand-logo brand-logo--venus"
+                src="assets/logos/venus.png"
+                alt="Venus Wine &amp; Spirit Merchants"
+                width="180"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li>
+              <img
+                class="brand-logo"
+                src="assets/logos/clf.png"
+                alt="CLF"
+                width="140"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li>
+              <img
+                class="brand-logo brand-logo--stores"
+                src="assets/logos/stores.png?v=4"
+                alt="Stores"
+                width="120"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Case studies -->
+      <section
+        id="work"
+        class="px-6 sm:px-10 lg:px-16 py-20 lg:py-28 border-t border-ink/10"
+      >
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="section-headline font-editorial text-ink mb-14 lg:mb-16"
+          >
+            Case studies
+          </h2>
+
+          <div class="divide-y divide-ink/10">
+            <article class="py-10 lg:py-12 first:pt-0">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                <div class="lg:col-span-7 order-2 lg:order-1">
+                  <h3
+                    class="font-mori text-sm font-semibold uppercase tracking-[0.15em] text-ink mb-4"
+                  >
+                    Collider - non-alc functional beer
+                  </h3>
+                  <p class="font-mori text-sm text-ink-muted mb-5">
+                    Head of Sales · 2024–present, transitioning to fractional
+                  </p>
+                  <div
+                    class="text-ink-muted leading-relaxed space-y-4 max-w-prose lg:max-w-none"
+                  >
+                    <p>
+                      Joined pre-launch as the second commercial hire. Owned the full
+                      B2B agenda — on-trade, off-trade, grocery, wholesale, export —
+                      alongside D2C, brand and NPD input.
+                    </p>
+                    <p>
+                      Scaled the business from zero to £2m run rate within 18 months
+                      (65/35 D2C/B2B). Wins included Morrisons (200 stores),
+                      Sainsbury's (150), Planet Organic, Dishoom, Hoxton Hotels, Six
+                      Senses, Young's. Eight wholesale RTMs opened including LWC, Venus,
+                      Berkmann. The fastest-growing non-alc beer in the UK over that
+                      period.
+                    </p>
+                  </div>
+                </div>
+                <figure
+                  class="lg:col-span-5 order-1 lg:order-2 parallax-wrap case-study-media case-study-media--landscape"
+                >
+                  <img
+                    src="assets/images/collider.png?v=3"
+                    alt="Collider non-alcoholic beer can"
+                    width="1200"
+                    height="900"
+                    class="absolute inset-0 h-full w-full object-cover"
+                    data-parallax
+                    data-parallax-strength="0.1"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+            </article>
+
+            <article class="py-10 lg:py-12">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                <div class="lg:col-span-7 order-2 lg:order-1">
+                  <h3
+                    class="font-mori text-sm font-semibold uppercase tracking-[0.15em] text-ink mb-4"
+                  >
+                    Vantguard / Gin Mare
+                  </h3>
+                  <p class="font-mori text-sm text-ink-muted mb-5">
+                    Head of UK &amp; Ireland · 2022–2024
+                  </p>
+                  <div
+                    class="text-ink-muted leading-relaxed space-y-4 max-w-prose lg:max-w-none"
+                  >
+                    <p>
+                      Country lead for a Spanish-owned super-premium portfolio entering
+                      and scaling in the UK. Owned commercial strategy, importer
+                      relationships, A&amp;P deployment (£260k p/a) and direct trade
+                      engagement across 10+ brands.
+                    </p>
+                    <p>
+                      15% value growth to £1.15m revenue, 12% volume growth to 8,580 9LCs
+                      (FY 2023 MAT). Tesco (495 stores), Sainsbury's (71), Waitrose (116),
+                      Wholefoods. Twenty-five new on-trade distributor listings. Managed
+                      lead-brand transition to Brown-Forman including financial
+                      reconciliations.
+                    </p>
+                  </div>
+                </div>
+                <figure
+                  class="lg:col-span-5 order-1 lg:order-2 parallax-wrap case-study-media case-study-media--landscape"
+                >
+                  <img
+                    src="assets/images/gin-mare.jpg?v=3"
+                    alt="Gin Mare bottle and G&amp;T with London skyline"
+                    width="1024"
+                    height="664"
+                    class="absolute inset-0 h-full w-full object-cover"
+                    data-parallax
+                    data-parallax-strength="0.1"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+            </article>
+
+            <article class="py-10 lg:py-12">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                <div class="lg:col-span-7 order-2 lg:order-1">
+                  <h3
+                    class="font-mori text-sm font-semibold uppercase tracking-[0.15em] text-ink mb-4"
+                  >
+                    Edrington Beam-Suntory
+                  </h3>
+                  <p class="font-mori text-sm text-ink-muted mb-5">
+                    National Account Manager - 5 years
+                  </p>
+                  <div class="text-ink-muted leading-relaxed space-y-4 max-w-prose lg:max-w-none">
+                    <p>
+                      Direct wholesale lead on Matthew Clark Bibendum - largest single
+                      RTM account. £1.8m portfolio under management across Macallan,
+                      Famous Grouse, Laphroaig, Maker's Mark, Jim Beam, Courvoisier and
+                      Suntory spirits.
+                    </p>
+                    <p>
+                      7% value growth, +212 distribution points across the portfolio,
+                      rose to #3 of 25 in the Advantage supplier survey. Six-month
+                      stand-in National Account Manager secondments at Tesco and Booker.
+                    </p>
+                  </div>
+                </div>
+                <figure
+                  class="lg:col-span-5 order-1 lg:order-2 parallax-wrap case-study-media case-study-media--landscape"
+                >
+                  <img
+                    src="assets/images/edrington-beam-suntory.png"
+                    alt="Edrington and Beam Suntory spirits portfolio"
+                    width="1200"
+                    height="900"
+                    class="absolute inset-0 h-full w-full object-cover"
+                    data-parallax
+                    data-parallax-strength="0.1"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+            </article>
+
+            <article class="py-10 lg:py-12">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                <div class="lg:col-span-7 order-2 lg:order-1">
+                  <h3
+                    class="font-mori text-sm font-semibold uppercase tracking-[0.15em] text-ink mb-4"
+                  >
+                    Yan Tan Hard Seltzer
+                  </h3>
+                  <p class="font-mori text-sm text-ink-muted mb-5">
+                    Co-founder · 2023–present, currently dormant
+                  </p>
+                  <div
+                    class="text-ink-muted leading-relaxed space-y-4 max-w-prose lg:max-w-none"
+                  >
+                    <p>
+                      Built a premium 4% / 0% ABV hard seltzer from concept to market.
+                      Led brand strategy, financial modelling, fundraising, sales,
+                      marketing and NPD.
+                    </p>
+                    <p>
+                      Spirits Business <em>Master</em> Award (top 7 globally from 300+
+                      entries). Great Taste 1-star. Successful 0% ABV line extension and
+                      full rebrand including pack format change.
+                    </p>
+                  </div>
+                </div>
+                <figure
+                  class="lg:col-span-5 order-1 lg:order-2 parallax-wrap case-study-media case-study-media--landscape"
+                >
+                  <img
+                    src="assets/images/yan-tan.png"
+                    alt="Yan Tan sparkling water cans"
+                    width="1200"
+                    height="900"
+                    class="absolute inset-0 h-full w-full object-cover"
+                    data-parallax
+                    data-parallax-strength="0.1"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section
+        id="about"
+        class="px-6 sm:px-10 lg:px-16 py-20 lg:py-28 border-t border-ink/10"
+      >
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="section-headline font-editorial text-ink mb-12 lg:mb-16"
+          >
+            About
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <figure
+              class="lg:col-span-4 parallax-wrap w-full max-w-xs lg:max-w-none"
+            >
+              <div class="relative aspect-[4/5] w-full">
+                <img
+                  src="assets/images/james-henderson-about.jpg"
+                  alt="James Henderson"
+                  width="672"
+                  height="1024"
+                  class="absolute inset-0 h-full w-full object-cover object-center"
+                  data-parallax
+                  data-parallax-strength="0.1"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </figure>
+
+            <div
+              class="lg:col-span-8 text-ink-muted leading-relaxed text-base sm:text-lg space-y-5"
+            >
+              <p>
+                Fifteen years in UK drinks. Started at Majestic and Sipsmith. Ran free
+                trade for Carlsberg across the Thames Valley. Five years on the
+                Macallan, Famous Grouse and Beam-Suntory portfolios at Edrington
+                including secondments into Tesco and Booker. UK &amp; Ireland country
+                lead on Gin Mare at Vantguard. Co-founded Yan Tan in 2023. Joined
+                Collider pre-launch in 2024 and built it to £2m in 18 months.
+              </p>
+              <p>
+                Operator credentials on both sides of the table — buyer relationships,
+                multinational portfolio management, and founder-side scar tissue.
+              </p>
+              <p>
+                Edinburgh MA Hons. WSET Level 2.
+                Intermediate French and Spanish. Based in West London.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section
+        id="contact"
+        class="px-6 sm:px-10 lg:px-16 py-20 lg:py-28 border-t border-ink/10"
+      >
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="section-headline font-editorial text-ink mb-10 lg:mb-12"
+          >
+            Contact
+          </h2>
+
+          <p class="font-mori text-base sm:text-lg text-ink mb-8">
+            <a href="mailto:james@jhenderson.uk" class="hover:opacity-60 transition-opacity"
+              >james@jhenderson.uk</a
+            >
+            <span class="text-ink-muted mx-2 sm:mx-3" aria-hidden="true">·</span>
+            <a href="tel:+447799038523" class="hover:opacity-60 transition-opacity"
+              >+44 (0)7799 038 523</a
+            >
+            <span class="text-ink-muted mx-2 sm:mx-3 hidden sm:inline" aria-hidden="true"
+              >·</span
+            >
+            <br class="sm:hidden" />
+            <a
+              href="https://www.linkedin.com/in/james-henderson-7053a73a/"
+              class="hover:opacity-60 transition-opacity"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </p>
+
+          <p class="mb-10">
+            <a
+              href="https://calendly.com/james-jhenderson/30min"
+              class="text-link font-mori text-sm sm:text-base"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book a 30-minute call
+              <span aria-hidden="true">→</span>
+            </a>
+          </p>
+
+          <p class="text-ink-muted leading-relaxed max-w-prose text-base sm:text-lg">
+            Best fit: UK challenger drinks brands at £500k–£3m revenue, or foreign
+            drinks brands evaluating UK entry. If you're outside those, drop me a line
+            anyway and let's talk!
+          </p>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="px-6 sm:px-10 lg:px-16 py-10 border-t border-ink/10">
+      <p class="max-w-7xl mx-auto font-mori text-sm text-ink-muted">
+        © <span id="year"></span> James Henderson
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
